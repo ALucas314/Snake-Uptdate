@@ -1,0 +1,123 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: rgb(13, 46, 73);
+  background-image: url('/assets/img/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: center;
+  background-size: 210vh;
+  color:azure
+}
+
+#game-container {
+  display: grid;
+  grid-template-columns: repeat(20, 20px);
+  grid-template-rows: repeat(20, 20px);
+  gap: 1px;
+  border: 1px solid #ccc;
+}
+
+#controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
+  border-radius: 10px;
+}
+
+#up {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Adicionado para centralizar verticalmente */
+  background-image: url('');
+  background-size: contain;
+}
+
+#left {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Adicionado para centralizar verticalmente */
+  background-image: url('');
+  background-size: contain;
+}
+
+#right {
+  grid-column: 3;
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Adicionado para centralizar verticalmente */
+  background-image: url('');
+  background-size: contain;
+}
+
+#down {
+  grid-column: 2;
+  grid-row: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Adicionado para centralizar verticalmente */
+  background-image: url('');
+  background-size: contain;
+}
+
+button {
+  font-size: 16px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.snake-segment {
+  background-color: #4CAF50; /* Cor da cobra */
+}
+
+.food {
+  background-color: red; /* Cor do quadrado vermelho */
+  border-radius: 10px;
+}
+
+#score-container {
+  top: 10px;
+  right: 10px;
+  background-color: #1c0c24;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 348px) {
+  #game-container {
+      width: 90vw; /* Ajuste de largura  */
+      height: 90vw; /* Ajuste de altura */
+      max-width: 320px;
+      max-height: 320px;
+      margin-bottom: 0; /* Remova o espaço na parte inferior */
+  }
+
+  #controls {
+      width: 80vw; /* Ajuste de largura */
+  }
+}
+
+
+@media screen and (max-width: 479px) {
+  #game-container {
+      width: 100vw; /* Ajuste de largura  */
+      height: 100vw; /* Ajuste de altura */
+      max-width: 315px;
+      max-height: 315px;
+      margin-bottom: 0; /* Remova o espaço na parte inferior */
+  }
+
+  #controls {
+      width: 80vw; /* Ajuste de largura */
+  }
+}
